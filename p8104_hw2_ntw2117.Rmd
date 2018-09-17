@@ -1,0 +1,14 @@
+---
+title: 'Probability: Homework 2'
+author: "Nick Williams"
+date: "September 17, 2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Problem 1: 
+
+
