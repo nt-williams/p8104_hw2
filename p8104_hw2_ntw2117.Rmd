@@ -11,4 +11,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Problem 1: 
 
+(1): By definition, a probability mass function must satisify $\sum^t f(t) = 1$, if $x \in \{0, 1, 2\}$
 
+$$
+\begin{aligned}
+\text{then } \sum_{i = 0}^2 \frac{k}{2^x} &= 1 \\ 
+\frac{k}{2^0} + \frac{k}{2^1} + \frac{k}{2^2} &= 1 \\
+\frac{k}{1} + \frac{k}{2} + \frac{k}{4} &= 1 \\
+\frac{4k}{4} + \frac{2k}{4} + \frac{k}{4} &= 1 \\ 
+\frac{7}{4}k &= 1 \\
+k &= 0.5714
+\end{aligned}
+$$
