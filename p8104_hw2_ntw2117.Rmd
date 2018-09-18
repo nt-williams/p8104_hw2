@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Problem 1: 
 
-(1): By definition, a probability mass function must satisify $\sum^t f(t) = 1$, if $x \in \{0, 1, 2, ...\}$
+(1) By definition, a probability mass function must satisify $\sum^t f(t) = 1$, if $x \in \{0, 1, 2, ...\}$
 
 $$
 \text{then } \sum_{i = 0}^{\infty} \frac{k}{2^x} = 1 
@@ -27,12 +27,12 @@ k &= \frac{1}{2} \\
 \end{aligned}
 $$
 
-(2): 
+(2) 
 
 
 ## Problem 2: 
 
-(1): For $f(t)$ to be a pdf, $\int_{-\infty}^{\infty}f(t)dt = 1$
+(1) For $f(t)$ to be a pdf, $\int_{-\infty}^{\infty}f(t)dt = 1$
 
 $$
 \begin{aligned}
@@ -42,9 +42,23 @@ c \int_0^{\infty} e^u -\frac{1}{2}du &= 1 \\
 c \int_0^{\infty} \frac{-e^u}{2}du &= 1 \\
 \frac{-c}{2} \int_0^{\infty} e^udu &= 1 \\
 \bigg[-\frac{1}{2}ce^{-2t}\bigg]_{0}^{\infty} &= 1 \\
-\lim_{t \rightarrow \infty} (-\frac{1}{2}ce^{-2t}) - (-\frac{1}{2}c) &= 1 \\
+\lim_{t \rightarrow \infty} \big(-\frac{1}{2}ce^{-2t}\big) - \big(-\frac{1}{2}c\big) &= 1 \\
 0 + \frac{1}{2}c &= 1 \\
 c &= 2
 \end{aligned}
 $$
+
+\newpage
+
+(2) a cdf is the integral of the corresponding pdf, thus: 
+
+$$
+F(x) = -\frac{1}{2}2e^{-2t} = -e^{2t} \text{, where } 0 \leq t < \infty
+$$ 
+
+
+
+
+
+
 
