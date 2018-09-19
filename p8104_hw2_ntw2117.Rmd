@@ -80,21 +80,43 @@ $$
 
 ## Problem 4: 
 
-(1) For $F(t) = (1 - \frac{1}{1 + t}) \text{ } I\{t \geq0\}$ to be a cdf, it must satisfy
+(1) For $F(t) = (1 - \frac{1}{1 + t}) \text{ } I\{t \geq0\}$ to be a cdf, it must satisfy:
 
   a. $\lim_{t\rightarrow \infty} F(t) = 1$ and $\lim_{t \rightarrow -\infty} F(t) = 0$:  
-  
-  
   
   $$
   \begin{aligned}
   1 &= \lim_{t \rightarrow \infty} (1 - \frac{1}{1 + t}) & 0 &= \lim_{t \rightarrow -\infty} (1 - \frac{1}{1 + t}) \\
-  &= 1 - \lim_{t \rightarrow \infty} \frac{1}{1 + t}     &   &= 1 - \lim_{t \rightarrow -\infty} \frac{1}{1 + t} \\
-  &= 1 - \lim_{t \rightarrow \infty} \frac{1}{1 + t}     &   &= 1 -\lim_{t \rightarrow -\infty} \frac{1}{1 + t}\\
-  &= 1 + 0 \\
-  &= 1
+  &= 1 - \lim_{t \rightarrow \infty} \frac{1}{1 + t}     &   &= 1 - \lim_{t \rightarrow 0} \frac{1}{1 + t} \\
+  &= 1 - \lim_{t \rightarrow \infty} \frac{1}{1 + t}     &   &= 1 -\frac{1}{1 + 0} \\ 
+  &= 1 + 0                                               &   &= 1 - 1 \\
+  &= 1                                                   &   &= 0
   \end{aligned}
   $$
+  
+  b. $F(t)$ is a non-decreasing function i.e., for any $t_1 < t_2$, $F(t_1) \leq F(t_2)$:  
+  
+  $$
+  \begin{aligned}
+  F(t_2) - F(t_1) &\geq 0 \\
+  \int_{-\infty}^{t_2} f(t_2) - \int_{-\infty}^{t_1} f(t_1) &\geq & f(t) = & \frac{d}{dt}F(t) = \frac{1}{(1 + t)^2} \\
+  \int_0^{t_2} f(t_2) - \int_0^{t_1} f(t_1) & \geq \\
+  \int_0^{t_2} \frac{1}{(1 + t)^2} - \int_0^{t_1} \frac{1}{(1 + t)^2} &\geq \\
+  \int_{t_1}^{t_2} \frac{1}{(1 + t)^2} &\geq 0
+  \end{aligned}
+  $$
+  
+  c. $F(t)$ is right continous, for any $t_0 \in (-\infty, \infty), \lim_{t \rightarrow +t_0} F(t) = F(t_0)$: 
+  
+  $$
+  \begin{aligned}
+  \lim_{t \rightarrow + t_0} \int_{-\infty}^t f(t)dt &= \int_{-\infty}^{t_0} f(t)dt \\
+  \lim_{t \rightarrow + t_0} \int_{0}^t f(t)dt &= \int_{0}^{t_0} f(t)dt \\
+  \int_{0}^{t_0} f(t)dt &= \int_{0}^{t_0} f(t)dt \\
+  \end{aligned}
+  $$
+  
+  
   
 \newpage
 
@@ -143,5 +165,17 @@ P(X > 2) = P(X \geq 3) &= 1 - P(X \leq 2) \\
 &= 0.7143
 \end{aligned}
 $$
+
+## Problem 6
+
+(1)
+
+$$
+
+$$
+
+
+
+
 
 
