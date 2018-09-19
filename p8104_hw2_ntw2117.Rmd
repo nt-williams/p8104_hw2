@@ -17,7 +17,7 @@ $$
 \text{then } \sum_{i = 0}^{\infty} \frac{k}{2^x} = 1 
 $$
 
-by the common form of the geometric series: $a = \frac{k}{2^0}; r = \frac{1}{2}$
+\hspace{.79cm} by the common form of the geometric series: $a = \frac{k}{2^0}; r = \frac{1}{2}$
 $$
 \begin{aligned}
 1 &= \frac{a}{1 - r} \\
@@ -36,14 +36,14 @@ $$
 
 $$
 \begin{aligned}
-\int_{0}^{\infty}ce^{-2t}dt &= 1 \\
-c \int_{0}^{\infty}e^{-2t}dt &= 1 \\
-c \int_0^{\infty} e^u -\frac{1}{2}du &= 1 \\
-c \int_0^{\infty} \frac{-e^u}{2}du &= 1 \\
-\frac{-c}{2} \int_0^{\infty} e^udu &= 1 \\
-\bigg[-\frac{1}{2}ce^{-2t}\bigg]_{0}^{\infty} &= 1 \\
-\lim_{t \rightarrow \infty} \big(-\frac{1}{2}ce^{-2t}\big) - \big(-\frac{1}{2}c\big) &= 1 \\
-0 + \frac{1}{2}c &= 1 \\
+1 &= \int_{0}^{\infty}ce^{-2t}dt \\
+ &= c \int_{0}^{\infty}e^{-2t}dt \\
+ &= c \int_0^{\infty} e^u -\frac{1}{2}du \\
+ &= c \int_0^{\infty} \frac{-e^u}{2}du \\
+ &= \frac{-c}{2} \int_0^{\infty} e^udu \\
+ &= \bigg[-\frac{1}{2}ce^{-2t}\bigg]_{0}^{\infty} \\
+ &= \lim_{t \rightarrow \infty} \big(-\frac{1}{2}ce^{-2t}\big) - \big(-\frac{1}{2}c\big) \\
+ &= 0 + \frac{1}{2}c \\
 c &= 2
 \end{aligned}
 $$
@@ -53,7 +53,7 @@ $$
 (2) a cdf is the integral of the corresponding pdf, thus: 
 
 $$
-F(x) = -\frac{1}{2}2e^{-2t} = -e^{2t} \text{, where } 0 < t < \infty
+F(x) = P(X\leq x) = -\frac{1}{2}2e^{-2t} = -e^{2t} \text{, where } 0 < t < \infty
 $$ 
 
 ## Problem 3: 
@@ -69,15 +69,79 @@ If $a \geq 0$ and $b \geq 0$ are constants satisfying $a + b = 1$ then, $a = 1 -
 $$
 \begin{aligned}
 1 &= af(t) + bg(t) \\
-1 &= \int_{-\infty}^{\infty} a f(t) + \int_{-\infty}^{\infty} bg(t) \\
-1 &= a \int_{-\infty}^{\infty}f(t) + b \int_{-\infty}^{\infty} g(t) \\
-1 &= (1 - b) \int_{-\infty}^{\infty}f(t) + b \int_{-\infty}^{\infty} g(t) \\
-1 &= (1 - b)(1) + b(1) \\
-1 &= 1 - b + b = 1
+ &= \int_{-\infty}^{\infty} a f(t) + \int_{-\infty}^{\infty} bg(t) \\
+ &= a \int_{-\infty}^{\infty}f(t) + b \int_{-\infty}^{\infty} g(t) \\
+ &= (1 - b) \int_{-\infty}^{\infty}f(t) + b \int_{-\infty}^{\infty} g(t) \\
+ &= (1 - b)(1) + b(1) \\
+ &= 1 - b + b \\
+ &= 1
 \end{aligned}
 $$
 
+## Problem 4: 
 
+(1) For $F(t) = (1 - \frac{1}{1 + t}) \text{ } I\{t \geq0\}$ to be a cdf, it must satisfy
 
+  a. $\lim_{t\rightarrow \infty} F(t) = 1$ and $\lim_{t \rightarrow -\infty} F(t) = 0$:  
+  
+  
+  
+  $$
+  \begin{aligned}
+  1 &= \lim_{t \rightarrow \infty} (1 - \frac{1}{1 + t}) & 0 &= \lim_{t \rightarrow -\infty} (1 - \frac{1}{1 + t}) \\
+  &= 1 - \lim_{t \rightarrow \infty} \frac{1}{1 + t}     &   &= 1 - \lim_{t \rightarrow -\infty} \frac{1}{1 + t} \\
+  &= 1 - \lim_{t \rightarrow \infty} \frac{1}{1 + t}     &   &= 1 -\lim_{t \rightarrow -\infty} \frac{1}{1 + t}\\
+  &= 1 + 0 \\
+  &= 1
+  \end{aligned}
+  $$
+  
+\newpage
+
+## Problem 5:
+
+(1)
+
+$$
+\begin{aligned}
+f(x) = P(X = x) = 
+  \begin{cases}
+    c(x + 1) &\text{ for } 0, 1, 2, 3, 4, 5 \\
+    0 &\text{ otherwise}
+  \end{cases}
+\end{aligned}
+$$
+
+by the definition of a probability mass function: 
+
+$$
+\begin{aligned}
+1 &= \sum_x f(x) \\
+&= \sum_x c(x + 1) \\
+&= \sum_{x = 0}^5 = c(x + 1) \\
+&= c + 2c + 3c + 4c + 5c + 6c \\
+&= 21c \\
+c &= \frac{1}{21}
+\end{aligned}
+$$
+
+(2)
+
+$$
+\begin{aligned}
+F(x) = P(X \leq x)= \sum_{X \leq x} \frac{x + 1}{21}
+\end{aligned}
+$$
+
+(3)
+
+$$
+\begin{aligned}
+P(X > 2) = P(X \geq 3) &= 1 - P(X \leq 2) \\
+&= 1 - \sum_{x = 0}^{2} \frac{x + 1}{21} \\
+&= 1 - \frac{1}{21} + \frac{2}{21} + \frac{3}{21} \\
+&= 0.7143
+\end{aligned}
+$$
 
 
