@@ -1,7 +1,6 @@
 ---
 title: 'Probability: Homework 2'
 author: "Nick Williams"
-date: "September 17, 2018"
 output: pdf_document
 ---
 
@@ -94,14 +93,16 @@ $$
   \end{aligned}
   $$
   
+  \newpage
+  
   b. $F(t)$ is a non-decreasing function i.e., for any $t_1 < t_2$, $F(t_1) \leq F(t_2)$:  
   
   $$
   \begin{aligned}
   F(t_2) - F(t_1) &\geq 0 \\
-  \int_{-\infty}^{t_2} f(t_2) - \int_{-\infty}^{t_1} f(t_1) &\geq & f(t) = & \frac{d}{dt}F(t) = \frac{1}{(1 + t)^2} \\
+  \int_{-\infty}^{t_2} f(t_2)I\{t \geq 0\} - \int_{-\infty}^{t_1} f(t_1)I\{t \geq 0\} & \geq & f(t) = & \frac{d}{dt}F(t) = \frac{1}{(1 + t)^2} \\
   \int_0^{t_2} f(t_2) - \int_0^{t_1} f(t_1) & \geq \\
-  \int_0^{t_2} \frac{1}{(1 + t)^2} - \int_0^{t_1} \frac{1}{(1 + t)^2} &\geq \\
+  \int_0^{t_2} \frac{1}{(1 + t)^2} - \int_0^{t_1} \frac{1}{(1 + t)^2} & \geq \\
   \int_{t_1}^{t_2} \frac{1}{(1 + t)^2} &\geq 0
   \end{aligned}
   $$
@@ -116,7 +117,17 @@ $$
   \end{aligned}
   $$
   
-  
+(2) The pdf, $f(t)$, of $F(t)$ is the derivative of $F(t)$, $\frac{d}{dt}F(t)$: 
+
+$$
+\begin{aligned}
+f(t) &= \frac{d}{dt} F(t) \\
+&= \frac{d}{dt} (1 - \frac{1}{1 + t}) \\
+&= \frac{d}{dt}(1) - \frac{d}{dt} (1 + t)^{-1} \\
+&= -(-(1 + t)^{-2}) \\ 
+&= \frac{1}{(1 + t)^2}
+\end{aligned}
+$$
   
 \newpage
 
@@ -171,10 +182,23 @@ $$
 (1)
 
 $$
-
+\begin{aligned}
+1 &= \int_{-\infty}^{\infty} f(x)dx \\
+&= \int_{-\infty}^{\infty} c(1 + x)^{-5}I\{x \geq 0\} \\
+&= \int_0^{\infty} c(1 + x)^{-5} \\
+&= c \int_0^{\infty} (1 + x)^{-5} \\
+&= \bigg[c \times \frac{(1 + x)^{-4}}{-4} \bigg]_0^{\infty} \\
+&= \lim_{x \rightarrow \infty} \bigg( c \times \frac{1}{-4(1 + x)^{-4}} \bigg) - \bigg(c \times \frac{1}{-4(1 + 0)^{-4}} \bigg) \\
+&= 0 + \frac{1}{4}c \\
+c &= 4
+\end{aligned}
 $$
 
+(2)
 
+$$
+F(x) = 4\bigg(\frac{1}{-4(1 + x)^4}\bigg) = -\frac{1}{(x + 1)^4}
+$$
 
 
 
