@@ -28,6 +28,29 @@ $$
 
 (2) 
 
+$$
+f(x) = \frac{c}{x}
+$$
+
+By definition, $\lim_{x \rightarrow \infty} F(x) = 1$
+
+$$
+\begin{aligned}
+F(x) &= \int_{\infty}^{\infty}f(x)dx \\
+&= \int_{-\infty}^{\infty} \frac{c}{x} dx \\
+&= c\int_{-\infty}^{\infty}\frac{1}{x} dx \\
+&= c \log(x)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+1 &\neq \lim_{x \rightarrow \infty} c \log(x) \\
+&\neq c \lim_{x \rightarrow \infty} \log(x) \\
+&\neq c(\infty) \\
+&\neq \infty
+\end{aligned}
+$$
 
 ## Problem 2: 
 
@@ -225,8 +248,37 @@ $$
 g(x) = \frac{f(x)I\{x \geq x_0\}}{1 - F(x_0)}
 $$  
 
-If $f(x)$ and $F(x)$ are the pdf and cdf of random variable $X$ then $f(x)I\{x \geq x_0\} \geq 0$ and $0 \leq F(x_0) \leq 1$, then 
+If $f(x)$ and $F(x)$ are the pdf and cdf of random variable $X$ then $f(x)I\{x \geq x_0\} \geq 0$ and $1 >F(x_0) > 0$, then 
 
 $$
 g(x) \geq 0 \text{ for all } x
 $$
+
+(2) $\int_{-\infty}^{\infty} g(x)dx = 1$ where $x_0$ is fixed 
+
+$$
+\begin{aligned}
+1 &= \int_{-\infty}^{\infty} g(x)dx \\
+&= \int_{-\infty}^{\infty} \frac{f(x)I\{x \geq x_0\}}{1 - F(x_0)}dx \\
+&= \int_{-\infty}^{\infty} f(x)I\{x \geq x_0 \}dx \\
+&= \frac{1}{1 - F(x_0)} \int_{x_0}^{\infty} f(x)dx \\
+&= \frac{[F(x)]_{x_0}^{\infty}}{1 - F(x_0)} \\
+&= \frac{1}{1 - 0} \\
+&= 1
+\end{aligned}
+$$
+
+The cdf of $g(x)$ = $G(x)$ 
+
+$$
+\begin{aligned}
+G(x) &= \int_{-\infty}^{\infty} g(x)dx \\
+&= \frac{F(x)}{1 - F(x_0)}
+\end{aligned}
+$$
+
+
+
+
+
+
