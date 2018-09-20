@@ -200,6 +200,33 @@ $$
 F(x) = 4\bigg(\frac{1}{-4(1 + x)^4}\bigg) = -\frac{1}{(x + 1)^4}
 $$
 
+(3)
 
+$$
+\begin{aligned}
+P(0.4 < x < 0.45) & = \int_{\infty}^{0.45}f(x)dx - \int_{-\infty}^{0,40}f(x)dx \\
+&= \int_{0.40}^{0.45} f(x)dx \\
+&= \big[F(x)\big]_{0.4}^{0.45} \\
+&= -\frac{1}{(0.45+1)^4} - \bigg(-\frac{1}{(0.4+1)^4}\bigg) \\
+&= -0.2262 + 0.2603 \\
+&= 0.0341
+\end{aligned}
+$$
 
+The probability of a flaw occuring between 0.4 and 0.45 meters is 0.0341
 
+## Problem 7
+
+If $g(x)$ is a pdf then it must satisfy: 
+
+(1) $g(x) \geq 0$ for all $x \in (-\infty, \infty)$  
+
+$$
+g(x) = \frac{f(x)I\{x \geq x_0\}}{1 - F(x_0)}
+$$  
+
+If $f(x)$ and $F(x)$ are the pdf and cdf of random variable $X$ then $f(x)I\{x \geq x_0\} \geq 0$ and $0 \leq F(x_0) \leq 1$, then 
+
+$$
+g(x) \geq 0 \text{ for all } x
+$$
