@@ -16,13 +16,14 @@ $$
 \text{then } \sum_{i = 0}^{\infty} \frac{k}{2^x} = 1 
 $$
 
-\hspace{.79cm} by the common form of the geometric series: $a = \frac{k}{2^0}; r = \frac{1}{2}$
+By the common form of the geometric series: $a = \frac{k}{2^0}; r = \frac{1}{2}$
+
 $$
 \begin{aligned}
-1 &= \frac{a}{1 - r} \\
-1 &= \frac{k}{1 - 1/2} \\
-1 &= \frac{k}{1/2} \\
-k &= \frac{1}{2} \\
+  1 &= \frac{a}{1 - r} \\
+  1 &= \frac{k}{1 - 1/2} \\
+  1 &= \frac{k}{1/2} \\
+  k &= \frac{1}{2} \\
 \end{aligned}
 $$
 
@@ -36,19 +37,19 @@ By definition, $\lim_{x \rightarrow \infty} F(x) = 1$
 
 $$
 \begin{aligned}
-F(x) &= \int_{\infty}^{\infty}f(x)dx \\
-&= \int_{-\infty}^{\infty} \frac{c}{x} dx \\
-&= c\int_{-\infty}^{\infty}\frac{1}{x} dx \\
-&= c \log(x)
+  F(x) &= \int_{\infty}^{\infty}f(x)dx \\
+       &= \int_{-\infty}^{\infty} \frac{c}{x} dx \\
+       &= c\int_{-\infty}^{\infty}\frac{1}{x} dx \\
+       &= c \log(x)
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-1 &\neq \lim_{x \rightarrow \infty} c \log(x) \\
-&\neq c \lim_{x \rightarrow \infty} \log(x) \\
-&\neq c(\infty) \\
-&\neq \infty
+  1 &\neq \lim_{x \rightarrow \infty} c \log(x) \\
+    &\neq c \lim_{x \rightarrow \infty} \log(x) \\
+    &\neq c(\infty) \\
+    &\neq \infty
 \end{aligned}
 $$
 
@@ -60,15 +61,15 @@ $$
 
 $$
 \begin{aligned}
-1 &= \int_{0}^{\infty}ce^{-2t}dt \\
- &= c \int_{0}^{\infty}e^{-2t}dt \\
- &= c \int_0^{\infty} e^u -\frac{1}{2}du \\
- &= c \int_0^{\infty} \frac{-e^u}{2}du \\
- &= \frac{-c}{2} \int_0^{\infty} e^udu \\
- &= \bigg[-\frac{1}{2}ce^{-2t}\bigg]_{0}^{\infty} \\
- &= \lim_{t \rightarrow \infty} \big(-\frac{1}{2}ce^{-2t}\big) - \big(-\frac{1}{2}c\big) \\
- &= 0 + \frac{1}{2}c \\
-c &= 2
+  1 &= \int_{0}^{\infty}ce^{-2t}dt \\
+    &= c \int_{0}^{\infty}e^{-2t}dt \\
+    &= c \int_0^{\infty} e^u -\frac{1}{2}du \\
+    &= c \int_0^{\infty} \frac{-e^u}{2}du \\
+    &= \frac{-c}{2} \int_0^{\infty} e^udu \\
+    &= \bigg[-\frac{1}{2}ce^{-2t}\bigg]_{0}^{\infty} \\
+    &= \lim_{t \rightarrow \infty} \big(-\frac{1}{2}ce^{-2t}\big) - \big(-\frac{1}{2}c\big) \\
+    &= 0 + \frac{1}{2}c \\
+  c &= 2
 \end{aligned}
 $$
 
@@ -90,13 +91,13 @@ If $a \geq 0$ and $b \geq 0$ are constants satisfying $a + b = 1$ then, $a = 1 -
 
 $$
 \begin{aligned}
-1 &= af(t) + bg(t) \\
- &= \int_{-\infty}^{\infty} a f(t) + \int_{-\infty}^{\infty} bg(t) \\
- &= a \int_{-\infty}^{\infty}f(t) + b \int_{-\infty}^{\infty} g(t) \\
- &= (1 - b) \int_{-\infty}^{\infty}f(t) + b \int_{-\infty}^{\infty} g(t) \\
- &= (1 - b)(1) + b(1) \\
- &= 1 - b + b \\
- &= 1
+  1 &= af(t) + bg(t) \\
+    &= \int_{-\infty}^{\infty} a f(t) + \int_{-\infty}^{\infty} bg(t) \\
+    &= a \int_{-\infty}^{\infty}f(t) + b \int_{-\infty}^{\infty} g(t) \\
+    &= (1 - b) \int_{-\infty}^{\infty}f(t) + b \int_{-\infty}^{\infty} g(t) \\
+    &= (1 - b)(1) + b(1) \\
+    &= 1 - b + b \\
+    &= 1
 \end{aligned}
 $$
 
@@ -106,47 +107,47 @@ $$
 
   a. $\lim_{t\rightarrow \infty} F(t) = 1$ and $\lim_{t \rightarrow -\infty} F(t) = 0$:  
   
-  $$
-  \begin{aligned}
+$$
+\begin{aligned}
   1 &= \lim_{t \rightarrow \infty} (1 - \frac{1}{1 + t}) & 0 &= \lim_{t \rightarrow -\infty} (1 - \frac{1}{1 + t}) \\
   &= 1 - \lim_{t \rightarrow \infty} \frac{1}{1 + t}     &   &= 1 - \lim_{t \rightarrow 0} \frac{1}{1 + t} \\
   &= 1 - \lim_{t \rightarrow \infty} \frac{1}{1 + t}     &   &= 1 -\frac{1}{1 + 0} \\ 
   &= 1 + 0                                               &   &= 1 - 1 \\
   &= 1                                                   &   &= 0
-  \end{aligned}
-  $$
+\end{aligned}
+$$
   
   b. $F(t)$ is a non-decreasing function i.e., for any $t_1 < t_2$, $F(t_1) \leq F(t_2)$:  
   
-  $$
-  \begin{aligned}
+$$
+\begin{aligned}
   F(t_2) - F(t_1) &\geq 0 \\
-  \int_{-\infty}^{t_2} f(t_2)I\{t \geq 0\} - \int_{-\infty}^{t_1} f(t_1)I\{t \geq 0\} & \geq & f(t) = & \frac{d}{dt}F(t) = \frac{1}{(1 + t)^2} \\
+  \int_{-\infty}^{t_2} f(t_2)I\{t \geq 0\} - \int_{-\infty}^{t_1} f(t_1)I\{t \geq 0\} & \geq & f(t) = & \frac{d}{dt}F(t) =      \frac{1}{(1 + t)^2} \\
   \int_0^{t_2} f(t_2) - \int_0^{t_1} f(t_1) & \geq \\
   \int_0^{t_2} \frac{1}{(1 + t)^2} - \int_0^{t_1} \frac{1}{(1 + t)^2} & \geq \\
   \int_{t_1}^{t_2} \frac{1}{(1 + t)^2} &\geq 0
-  \end{aligned}
-  $$
+\end{aligned}
+$$
   
   c. $F(t)$ is right continous, for any $t_0 \in (-\infty, \infty), \lim_{t \rightarrow +t_0} F(t) = F(t_0)$: 
   
-  $$
-  \begin{aligned}
+$$
+\begin{aligned}
   \lim_{t \rightarrow + t_0} \int_{-\infty}^t f(t)dt &= \int_{-\infty}^{t_0} f(t)dt \\
-  \lim_{t \rightarrow + t_0} \int_{0}^t f(t)dt &= \int_{0}^{t_0} f(t)dt \\
-  \int_{0}^{t_0} f(t)dt &= \int_{0}^{t_0} f(t)dt \\
-  \end{aligned}
-  $$
+  \lim_{t \rightarrow + t_0} \int_{0}^t f(t)dt       &= \int_{0}^{t_0} f(t)dt \\
+  \int_{0}^{t_0} f(t)dt                              &= \int_{0}^{t_0} f(t)dt \\
+\end{aligned}
+$$
   
 (2) The pdf, $f(t)$, of $F(t)$ is the derivative of $F(t)$, $\frac{d}{dt}F(t)$: 
 
 $$
 \begin{aligned}
-f(t) &= \frac{d}{dt} F(t) \\
-&= \frac{d}{dt} (1 - \frac{1}{1 + t}) \\
-&= \frac{d}{dt}(1) - \frac{d}{dt} (1 + t)^{-1} \\
-&= -(-(1 + t)^{-2}) \\ 
-&= \frac{1}{(1 + t)^2}
+  f(t) &= \frac{d}{dt} F(t) \\
+       &= \frac{d}{dt} (1 - \frac{1}{1 + t}) \\
+       &= \frac{d}{dt}(1) - \frac{d}{dt} (1 + t)^{-1} \\
+       &= -(-(1 + t)^{-2}) \\ 
+       &= \frac{1}{(1 + t)^2}
 \end{aligned}
 $$
 
@@ -158,10 +159,10 @@ $$
 
 $$
 \begin{aligned}
-f(x) = P(X = x) = 
+  f(x) = P(X = x) = 
   \begin{cases}
     c(x + 1) &\text{ for } 0, 1, 2, 3, 4, 5 \\
-    0 &\text{ otherwise}
+           0 &\text{ otherwise}
   \end{cases}
 \end{aligned}
 $$
@@ -170,12 +171,12 @@ by the definition of a probability mass function:
 
 $$
 \begin{aligned}
-1 &= \sum_x f(x) \\
-&= \sum_x c(x + 1) \\
-&= \sum_{x = 0}^5 = c(x + 1) \\
-&= c + 2c + 3c + 4c + 5c + 6c \\
-&= 21c \\
-c &= \frac{1}{21}
+  1 &= \sum_x f(x) \\
+    &= \sum_x c(x + 1) \\
+    &= \sum_{x = 0}^5 = c(x + 1) \\
+    &= c + 2c + 3c + 4c + 5c + 6c \\
+    &= 21c \\
+  c &= \frac{1}{21}
 \end{aligned}
 $$
 
@@ -183,7 +184,7 @@ $$
 
 $$
 \begin{aligned}
-F(x) = P(X \leq x)= \sum_{X \leq x} \frac{x + 1}{21}
+  F(x) = P(X \leq x)= \sum_{X \leq x} \frac{x + 1}{21}
 \end{aligned}
 $$
 
@@ -191,10 +192,10 @@ $$
 
 $$
 \begin{aligned}
-P(X > 2) = P(X \geq 3) &= 1 - P(X \leq 2) \\
-&= 1 - \sum_{x = 0}^{2} \frac{x + 1}{21} \\
-&= 1 - \frac{1}{21} + \frac{2}{21} + \frac{3}{21} \\
-&= 0.7143
+  P(X > 2) = P(X \geq 3) &= 1 - P(X \leq 2) \\
+                         &= 1 - \sum_{x = 0}^{2} \frac{x + 1}{21} \\
+                         &= 1 - \frac{1}{21} + \frac{2}{21} + \frac{3}{21} \\
+                         &= 0.7143
 \end{aligned}
 $$
 
@@ -206,14 +207,14 @@ $$
 
 $$
 \begin{aligned}
-1 &= \int_{-\infty}^{\infty} f(x)dx \\
-&= \int_{-\infty}^{\infty} c(1 + x)^{-5}I\{x \geq 0\} \\
-&= \int_0^{\infty} c(1 + x)^{-5} \\
-&= c \int_0^{\infty} (1 + x)^{-5} \\
-&= \bigg[c \times \frac{(1 + x)^{-4}}{-4} \bigg]_0^{\infty} \\
-&= \lim_{x \rightarrow \infty} \bigg( c \times \frac{1}{-4(1 + x)^{4}} \bigg) - \bigg(c \times \frac{1}{-4(1 + 0)^{4}} \bigg) \\
-&= 0 + \frac{1}{4}c \\
-c &= 4
+  1 &= \int_{-\infty}^{\infty} f(x)dx \\
+    &= \int_{-\infty}^{\infty} c(1 + x)^{-5}I\{x \geq 0\} \\
+    &= \int_0^{\infty} c(1 + x)^{-5} \\
+    &= c \int_0^{\infty} (1 + x)^{-5} \\
+    &= \bigg[c \times \frac{(1 + x)^{-4}}{-4} \bigg]_0^{\infty} \\
+    &= \lim_{x \rightarrow \infty} \bigg( c \times \frac{1}{-4(1 + x)^{4}} \bigg) - \bigg(c \times \frac{1}{-4(1 + 0)^{4}}         \bigg) \\
+    &= 0 + \frac{1}{4}c \\
+  c &= 4
 \end{aligned}
 $$
 
@@ -227,12 +228,12 @@ $$
 
 $$
 \begin{aligned}
-P(0.4 < x < 0.45) & = \int_{\infty}^{0.45}f(x)dx - \int_{-\infty}^{0,40}f(x)dx \\
-&= \int_{0.40}^{0.45} f(x)dx \\
-&= \big[F(x)\big]_{0.4}^{0.45} \\
-&= -\frac{1}{(0.45+1)^4} - \bigg(-\frac{1}{(0.4+1)^4}\bigg) \\
-&= -0.2262 + 0.2603 \\
-&= 0.0341
+  P(0.4 < x < 0.45) & = \int_{\infty}^{0.45}f(x)dx - \int_{-\infty}^{0,40}f(x)dx \\
+                    &= \int_{0.40}^{0.45} f(x)dx \\
+                    &= \big[F(x)\big]_{0.4}^{0.45} \\
+                    &= -\frac{1}{(0.45+1)^4} - \bigg(-\frac{1}{(0.4+1)^4}\bigg) \\
+                    &= -0.2262 + 0.2603 \\
+                    &= 0.0341
 \end{aligned}
 $$
 
@@ -260,13 +261,13 @@ $$
 
 $$
 \begin{aligned}
-1 &= \int_{-\infty}^{\infty} g(x)dx \\
-&= \int_{-\infty}^{\infty} \frac{f(x)I\{x \geq x_0\}}{1 - F(x_0)}dx \\
-&= \int_{-\infty}^{\infty} f(x)I\{x \geq x_0 \}dx \\
-&= \frac{1}{1 - F(x_0)} \int_{x_0}^{\infty} f(x)dx \\
-&= \frac{[F(x)]_{x_0}^{\infty}}{1 - F(x_0)} \\
-&= \frac{1}{1 - 0} \\
-&= 1
+  1 &= \int_{-\infty}^{\infty} g(x)dx \\
+    &= \int_{-\infty}^{\infty} \frac{f(x)I\{x \geq x_0\}}{1 - F(x_0)}dx \\
+    &= \int_{-\infty}^{\infty} f(x)I\{x \geq x_0 \}dx \\
+    &= \frac{1}{1 - F(x_0)} \int_{x_0}^{\infty} f(x)dx \\
+    &= \frac{[F(x)]_{x_0}^{\infty}}{1 - F(x_0)} \\
+    &= \frac{1}{1 - 0} \\
+    &= 1
 \end{aligned}
 $$
 
@@ -274,8 +275,8 @@ The cdf of $g(x)$ = $G(x)$
 
 $$
 \begin{aligned}
-G(x) &= \int_{-\infty}^{\infty} g(x)dx \\
-&= \frac{F(x)}{1 - F(x_0)}
+  G(x) &= \int_{-\infty}^{\infty} g(x)dx \\
+       &= \frac{F(x)}{1 - F(x_0)}
 \end{aligned}
 $$
 
