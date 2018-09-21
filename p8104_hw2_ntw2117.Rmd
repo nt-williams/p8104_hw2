@@ -10,10 +10,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Problem 1: 
 
-(1) By definition, a probability mass function must satisify $\sum^t f(t) = 1$, if $x \in \{0, 1, 2, ...\}$
+(1) By definition, a probability mass function must satisify $\sum_{X \leq x} f(t) = 1$, if $x \in \{0, 1, 2, ...\}$ In addition, $k$ must be positive because $f(t) > 0$ for $f(t)$ to be a pmf. 
 
 $$
-\text{then } \sum_{i = 0}^{\infty} \frac{k}{2^x} = 1 
+\text{thus, } \sum_{i = 0}^{\infty} \frac{k}{2^x} = 1 
 $$
 
 By the common form of the geometric series: $a = \frac{k}{2^0}; r = \frac{1}{2}$
@@ -30,7 +30,7 @@ $$
 (2) 
 
 $$
-f(x) = \frac{c}{x}
+\frac{c}{x}
 $$
 
 By definition, $\lim_{x \rightarrow \infty} F(x) = 1$
@@ -57,7 +57,7 @@ $$
 
 ## Problem 2: 
 
-(1) For $f(t)$ to be a pdf, $\int_{-\infty}^{\infty}f(t)dt = 1$
+(1) For $f(t)$ to be a pdf, $\int_{-\infty}^{\infty}f(t)dt = 1$ and $f(t) > 0$, thus $c > 0$
 
 $$
 \begin{aligned}
@@ -73,10 +73,10 @@ $$
 \end{aligned}
 $$
 
-(2) a cdf is the integral of the corresponding pdf, thus: 
+(2) The corresponding cdf of $f(x)$, $F(x)$ is the integral of $f(x)$, thus: 
 
 $$
-F(x) = P(X\leq x) = -\frac{1}{2}2e^{-2t} = -e^{2t} \text{, where } 0 < t < \infty
+F(x) = P(X\leq x) =  -e^{-2t} \text{, where } 0 < t < \infty
 $$ 
 
 ## Problem 3: 
@@ -91,8 +91,7 @@ If $a \geq 0$ and $b \geq 0$ are constants satisfying $a + b = 1$ then, $a = 1 -
 
 $$
 \begin{aligned}
-  1 &= af(t) + bg(t) \\
-    &= \int_{-\infty}^{\infty} a f(t) + \int_{-\infty}^{\infty} bg(t) \\
+   1 &= \int_{-\infty}^{\infty} a f(t) + \int_{-\infty}^{\infty} bg(t) \\
     &= a \int_{-\infty}^{\infty}f(t) + b \int_{-\infty}^{\infty} g(t) \\
     &= (1 - b) \int_{-\infty}^{\infty}f(t) + b \int_{-\infty}^{\infty} g(t) \\
     &= (1 - b)(1) + b(1) \\
@@ -109,7 +108,7 @@ $$
   
 $$
 \begin{aligned}
-  1 &= \lim_{t \rightarrow \infty} (1 - \frac{1}{1 + t}) & 0 &= \lim_{t \rightarrow -\infty} (1 - \frac{1}{1 + t}) \\
+  1 &= \lim_{t \rightarrow \infty} (1 - \frac{1}{1 + t}) & 0 &= \lim_{t \rightarrow -\infty} (1 - \frac{1}{1 + t})I\{t \geq     0\} \\
   &= 1 - \lim_{t \rightarrow \infty} \frac{1}{1 + t}     &   &= 1 - \lim_{t \rightarrow 0} \frac{1}{1 + t} \\
   &= 1 - \lim_{t \rightarrow \infty} \frac{1}{1 + t}     &   &= 1 -\frac{1}{1 + 0} \\ 
   &= 1 + 0                                               &   &= 1 - 1 \\
@@ -122,10 +121,12 @@ $$
 $$
 \begin{aligned}
   F(t_2) - F(t_1) &\geq 0 \\
-  \int_{-\infty}^{t_2} f(t_2)I\{t \geq 0\} - \int_{-\infty}^{t_1} f(t_1)I\{t \geq 0\} & \geq & f(t) = & \frac{d}{dt}F(t) =      \frac{1}{(1 + t)^2} \\
-  \int_0^{t_2} f(t_2) - \int_0^{t_1} f(t_1) & \geq \\
-  \int_0^{t_2} \frac{1}{(1 + t)^2} - \int_0^{t_1} \frac{1}{(1 + t)^2} & \geq \\
-  \int_{t_1}^{t_2} \frac{1}{(1 + t)^2} &\geq 0
+  \int_{-\infty}^{t_2} f(t_2)I\{t \geq 0\}dt - \int_{-\infty}^{t_1} f(t_1)I\{t \geq 0\}dt & \geq & f(t) = & \frac{d}{dt}F(t)     = \frac{1}{(1 + t)^2} \\
+  \int_0^{t_2} f(t_2)dt - \int_0^{t_1} f(t_1)dt & \geq \\
+  \int_0^{t_2} \frac{1}{(1 + t)^2}dt - \int_0^{t_1} \frac{1}{(1 + t)^2}dt & \geq \\
+  \int_{t_1}^{t_2} \frac{1}{(1 + t)^2}dt &\geq \\
+  (1 - \frac{1}{1 + t_2}) - (1 - \frac{1}{1 + t_1}) &\geq \\
+  -\frac{1}{1 + t_2} + \frac{1}{1 + t_1} &\geq 0 \\
 \end{aligned}
 $$
   
@@ -167,7 +168,7 @@ $$
 \end{aligned}
 $$
 
-by the definition of a probability mass function: 
+Because $f(x) > 0$ then $c > 0$. In addition, by the definition of a probability mass function: 
 
 $$
 \begin{aligned}
@@ -203,7 +204,7 @@ $$
 
 ## Problem 6
 
-(1)
+(1) Because $f(x) \geq 0$, $c > 0$. In addition $\int_{-\infty}^{\infty} f(x)dx = 1$, thus
 
 $$
 \begin{aligned}
@@ -218,10 +219,10 @@ $$
 \end{aligned}
 $$
 
-(2)
+(2) $F(x)$ is the integral of $f(x)$
 
 $$
-F(x) = 4\bigg(\frac{1}{-4(1 + x)^4}\bigg) = -\frac{1}{(x + 1)^4}
+F(x) = P(X \leq x) = 4\bigg(\frac{1}{-4(1 + x)^4}\bigg) = -\frac{1}{(x + 1)^4}
 $$
 
 (3)
@@ -263,9 +264,9 @@ $$
 \begin{aligned}
   1 &= \int_{-\infty}^{\infty} g(x)dx \\
     &= \int_{-\infty}^{\infty} \frac{f(x)I\{x \geq x_0\}}{1 - F(x_0)}dx \\
-    &= \int_{-\infty}^{\infty} f(x)I\{x \geq x_0 \}dx \\
+    &= \frac{1}{1 - F(x_0)} \int_{-\infty}^{\infty} f(x)I\{x \geq x_0 \}dx \\
     &= \frac{1}{1 - F(x_0)} \int_{x_0}^{\infty} f(x)dx \\
-    &= \frac{[F(x)]_{x_0}^{\infty}}{1 - F(x_0)} \\
+    &= \bigg[\frac{F(x)}{1 - F(x_0)} \bigg]_{x_0}^{\infty} \\
     &= \frac{1}{1 - 0} \\
     &= 1
 \end{aligned}
