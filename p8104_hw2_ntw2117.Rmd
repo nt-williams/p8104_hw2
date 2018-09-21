@@ -52,6 +52,8 @@ $$
 \end{aligned}
 $$
 
+\newpage
+
 ## Problem 2: 
 
 (1) For $f(t)$ to be a pdf, $\int_{-\infty}^{\infty}f(t)dt = 1$
@@ -69,8 +71,6 @@ $$
 c &= 2
 \end{aligned}
 $$
-
-\newpage
 
 (2) a cdf is the integral of the corresponding pdf, thus: 
 
@@ -116,8 +116,6 @@ $$
   \end{aligned}
   $$
   
-  \newpage
-  
   b. $F(t)$ is a non-decreasing function i.e., for any $t_1 < t_2$, $F(t_1) \leq F(t_2)$:  
   
   $$
@@ -151,7 +149,7 @@ f(t) &= \frac{d}{dt} F(t) \\
 &= \frac{1}{(1 + t)^2}
 \end{aligned}
 $$
-  
+
 \newpage
 
 ## Problem 5:
@@ -200,6 +198,8 @@ P(X > 2) = P(X \geq 3) &= 1 - P(X \leq 2) \\
 \end{aligned}
 $$
 
+\newpage
+
 ## Problem 6
 
 (1)
@@ -211,7 +211,7 @@ $$
 &= \int_0^{\infty} c(1 + x)^{-5} \\
 &= c \int_0^{\infty} (1 + x)^{-5} \\
 &= \bigg[c \times \frac{(1 + x)^{-4}}{-4} \bigg]_0^{\infty} \\
-&= \lim_{x \rightarrow \infty} \bigg( c \times \frac{1}{-4(1 + x)^{-4}} \bigg) - \bigg(c \times \frac{1}{-4(1 + 0)^{-4}} \bigg) \\
+&= \lim_{x \rightarrow \infty} \bigg( c \times \frac{1}{-4(1 + x)^{4}} \bigg) - \bigg(c \times \frac{1}{-4(1 + 0)^{4}} \bigg) \\
 &= 0 + \frac{1}{4}c \\
 c &= 4
 \end{aligned}
@@ -247,6 +247,8 @@ If $g(x)$ is a pdf then it must satisfy:
 $$
 g(x) = \frac{f(x)I\{x \geq x_0\}}{1 - F(x_0)}
 $$  
+
+\newpage
 
 If $f(x)$ and $F(x)$ are the pdf and cdf of random variable $X$ then $f(x)I\{x \geq x_0\} \geq 0$ and $1 >F(x_0) > 0$, then 
 
