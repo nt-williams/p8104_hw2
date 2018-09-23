@@ -1,12 +1,16 @@
 ---
 title: 'Probability: Homework 2'
-author: "Nick Williams"
 output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+\begin{center}
+\textbf{Nick Williams \\
+ntw2117}
+\end{center}
 
 ## Problem 1: 
 
@@ -30,28 +34,27 @@ $$
 (2) 
 
 $$
-\frac{c}{x}
+f(x) = \frac{c}{x}
 $$
 
-By definition, $\lim_{x \rightarrow \infty} F(x) = 1$
+If $f(x)$ is a pdf by definition, $\sum_X \leq x f(x) = 1$ and a common ratio should exist, if $c > 0$ then
 
 $$
 \begin{aligned}
-  F(x) &= \int_{\infty}^{\infty}f(x)dx \\
-       &= \int_{-\infty}^{\infty} \frac{c}{x} dx \\
-       &= c\int_{-\infty}^{\infty}\frac{1}{x} dx \\
-       &= c \log(x)
+  S_n &= \frac{c}{x_n} \\
+  S_1 &= \frac{c}{1}, S_2 = \frac{c}{2}, S_3 = \frac{c}{3} 
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-  1 &\neq \lim_{x \rightarrow \infty} c \log(x) \\
-    &\neq c \lim_{x \rightarrow \infty} \log(x) \\
-    &\neq c(\infty) \\
-    &\neq \infty
+r_1 = S_2 / S_1 &= \frac{c}{2} \times \frac{1}{c} = \frac{1}{2} \\
+r_2 = S_3 / S_2 &= \frac{c}{3} \times \frac{2}{c} = \frac{2}{3} \\
+r_1 &\neq r_2
 \end{aligned}
 $$
+
+There is no common ratio, $r$, the series therefore diverges and thus does not sum to 1 meaning $f(x) = \frac{c}{x}$ cannot be a probability density function. 
 
 \newpage
 
@@ -240,6 +243,8 @@ $$
 
 The probability of a flaw occuring between 0.4 and 0.45 meters is 0.0341
 
+\newpage
+
 ## Problem 7
 
 If $g(x)$ is a pdf then it must satisfy: 
@@ -249,8 +254,6 @@ If $g(x)$ is a pdf then it must satisfy:
 $$
 g(x) = \frac{f(x)I\{x \geq x_0\}}{1 - F(x_0)}
 $$  
-
-\newpage
 
 If $f(x)$ and $F(x)$ are the pdf and cdf of random variable $X$ then $f(x)I\{x \geq x_0\} \geq 0$ and $1 >F(x_0) > 0$, then 
 
