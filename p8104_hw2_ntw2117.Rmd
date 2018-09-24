@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ntw2117}
 \end{center}
 
-## Problem 1: 
+## Problem 1 
 
 (1) 
 
@@ -60,7 +60,7 @@ There is no common ratio, $r$, the series therefore diverges and thus does not s
 
 \newpage
 
-## Problem 2: 
+## Problem 2 
 
 (1) For $f(t)$ to be a pdf, $\int_{-\infty}^{\infty}f(t)dt = 1$ and $f(t) > 0$, thus $c > 0$
 
@@ -84,7 +84,7 @@ $$
 F(x) = P(X\leq x) =  -e^{-2t} \text{, where } 0 < t < \infty
 $$ 
 
-## Problem 3: 
+## Problem 3 
 
 If $f(t)$ and $g(t)$ are pdfs then: 
 
@@ -105,7 +105,7 @@ $$
 \end{aligned}
 $$
 
-## Problem 4: 
+## Problem 4 
 
 (1) For $F(t) = (1 - \frac{1}{1 + t}) \text{ } I\{t \geq0\}$ to be a cdf, it must satisfy:
 
@@ -159,7 +159,7 @@ $$
 
 \newpage
 
-## Problem 5:
+## Problem 5
 
 (1)
 
