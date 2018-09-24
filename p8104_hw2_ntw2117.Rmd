@@ -14,7 +14,9 @@ ntw2117}
 
 ## Problem 1: 
 
-(1) By definition, a probability mass function must satisify $\sum_{X \leq x} f(t) = 1$, if $x \in \{0, 1, 2, ...\}$ In addition, $k$ must be positive because $f(t) > 0$ for $f(t)$ to be a pmf. 
+(1) 
+
+By definition, a probability mass function must satisify $\sum_{X \leq x} f(t) = 1$, if $x \in \{0, 1, 2, ...\}$ In addition, $k$ must be positive because $f(t) > 0$ for $f(t)$ to be a pmf. 
 
 $$
 \text{thus, } \sum_{i = 0}^{\infty} \frac{k}{2^x} = 1 
